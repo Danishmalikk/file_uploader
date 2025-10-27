@@ -64,7 +64,7 @@ export default function HomePage() {
       );
 
       console.log("Cloudinary upload:", uploadRes.data);
-      // setVideoUrl(uploadRes?.data.secure_url || " ");
+      setVideoUrl(uploadRes?.data.secure_url || " ");
     } catch (error) {
       setError("Upload failed: " + error.message);
     }
@@ -81,7 +81,8 @@ export default function HomePage() {
       const { data } = await axios.post("/api/transcribe", { videoUrl });
       setTranscript(data.text);
     } catch (err) {
-      setError("Transcription failed: " + err.message);
+      console.log("error", err)
+      setError(err.response.data.error);
     } finally {
       setIsTranscribing(false);
     }

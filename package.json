@@ -9,11 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.15",
     "axios": "^1.12.2",
     "cloudinary": "^2.8.0",
     "firebase": "^12.4.0",
+    "fs-extra": "^11.3.2",
     "next": "16.0.0",
     "next-cloudinary": "^6.16.2",
+    "node-fetch": "^3.3.2",
     "openai": "^6.7.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
